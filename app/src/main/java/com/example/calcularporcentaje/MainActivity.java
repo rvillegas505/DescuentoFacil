@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         String s1=et1.getText().toString();
         String s2=et2.getText().toString();
 
-        if (s1.isEmpty() || s1.isEmpty()){
+        if (s1.isEmpty() || s2.isEmpty()){
             tv1.setText("Ingrese numeros para calcular");
         }else {
             v1 = Double.parseDouble(s1);
@@ -36,7 +36,10 @@ public class MainActivity extends AppCompatActivity {
 
             if (v1 == 0 || v2 == 0) {
                 tv1.setText("Ingrese numeros para calcular");
-            } else {
+            }else if (v2>100){
+                tv1.setText("Ingrese un % menor a 100");
+            }
+            else {
                 Double productoUno = v1 * v2;
                 Double divporcien = productoUno / 100;
                 Double resultado = v1 - divporcien;
