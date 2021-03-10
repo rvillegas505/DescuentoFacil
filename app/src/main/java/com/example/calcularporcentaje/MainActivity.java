@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-
+//by rodrigo villegas / rodiivv
 public class MainActivity extends AppCompatActivity {
 
     private EditText et1, et2;
@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
                 Double divporcien = productoUno / 100;
                 Double resultado = v1 - divporcien;
                 tv1.setText("El precio con el descuento es: " + resultado);
+
+                //by rodrigo villegas / rodiivv
             }
         }
     }
