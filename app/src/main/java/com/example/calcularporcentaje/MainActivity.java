@@ -23,16 +23,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void calcular(View v){
-        Double v1=0.0;
-        Double v2=0.0;
+        Double v1;
+        Double v2;
         String s1=et1.getText().toString();
         String s2=et2.getText().toString();
 
         if (s1.isEmpty() || s2.isEmpty()){
             tv1.setText("Ingrese numeros para calcular");
         }else {
-            v1 = Double.parseDouble(s1);
-            v2 = Double.parseDouble(s2);
+            v1 = Double.valueOf(s1);
+            v2 = Double.valueOf(s2);
 
             if (v1 == 0 || v2 == 0) {
                 tv1.setText("Ingrese numeros para calcular");
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 Double productoUno = v1 * v2;
                 Double divporcien = productoUno / 100;
                 Double resultado = v1 - divporcien;
-                tv1.setText("El precio con el descuento es: " + resultado);
+                tv1.setText("El precio con el descuento es: " + String.format("%.2f", (Double)resultado));
 
                 //by rodrigo villegas / rodiivv
             }
