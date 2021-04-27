@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
                 tv1.setText("Ingrese numeros para calcular");
             }else if (v2>100){
                 tv1.setText("Ingrese un % menor a 100");
+            }else if (v1>999999999){
+                tv1.setText("Ingresé un número de menor tamaño");
             }
             else {
                 Double productoUno = v1 * v2;
